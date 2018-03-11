@@ -279,8 +279,8 @@ O que nossa função de comparação quer saber é se o valor de ``` a ``` deve 
 
 ```cpp
 bool comparacao(int a, int b){
-    if(a > b) return true;
-	return false;
+  if(a > b) return true;
+  return false;
 }
 ```
 
