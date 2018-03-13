@@ -167,7 +167,7 @@ set<int> conj;
 // codigo que preenche o set
 
 	//iterator!
-for(auto i = conj.begin(),i != conj.end(); i++){
+for(auto i = conj.begin(); i != conj.end(); i++){
 	printf("%d\n",*i);
 }
 ```
@@ -177,7 +177,7 @@ map<int,int> mapa;
 // codigo que preenche o map
 
 	//iterator!
-for(auto i = mapa.begin(),i != mapa.end(); i++){
+for(auto i = mapa.begin(); i != mapa.end(); i++){
 	// Os *pares* chave valor do map funcionam como um pair (Duh!) 
 					
 	printf("%d %d\n",(*i.first),(*i).second);
