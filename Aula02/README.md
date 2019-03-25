@@ -330,6 +330,20 @@ Também existe um método pronto para trocar a ordem de um vetor. A complexidade
 ```cpp
 reverse(v.begin(),v.end());
 ```
+## rand bom
+
+Em C/C++ a função rand() pode ser utilizada para gerar um valor aleátorio, no entando ela não é suficiente para alguns problemas, pois tem um limite no valo máximo que varia dependendo da máquina em que está sendo executada, e não nos permite gerar valores uniformes (geralmente usamos rand() % x para gerar valores entre 0 e x, mas isto não gera uma distribuição uniforme, o que geralmente não tem problema), isto também afeta outras funções que utilizam rand() internamente, como random_suffle.
+
+As funções abaixo podem ser utilizadas:
+
+``` cpp
+// o include de bits/stdc++.h ja basta
+#include <random>
+#include <chrono>
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count()) // Cria o gerador com seed baseada no argumento;
+uniform_int_distribution<int>(0, i)(rng) // Gera um número aleatório entre 0 e i
+shuffle(permutation.begin(), permutation.end(), rng); // random_shuffle
+```
 
 ## next_permutation e prev_permutation
 
