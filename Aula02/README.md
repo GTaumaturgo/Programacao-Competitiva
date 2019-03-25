@@ -334,7 +334,7 @@ reverse(v.begin(),v.end());
 
 Em C/C++ a função rand() pode ser utilizada para gerar um valor aleátorio, no entando ela não é suficiente para alguns problemas, pois tem um limite no valo máximo que varia dependendo da máquina em que está sendo executada, e não nos permite gerar valores uniformes (geralmente usamos rand() % x para gerar valores entre 0 e x, mas isto não gera uma distribuição uniforme, o que geralmente não tem problema), isto também afeta outras funções que utilizam rand() internamente, como random_suffle.
 
-As funções abaixo podem ser utilizadas:
+As funções abaixo podem ser utilizadas para contornar os problemas do rand():
 
 ``` cpp
 // o include de bits/stdc++.h ja basta
