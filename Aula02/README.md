@@ -340,8 +340,8 @@ As funções abaixo podem ser utilizadas:
 // o include de bits/stdc++.h ja basta
 #include <random>
 #include <chrono>
-mt19937 rng(chrono::steady_clock::now().time_since_epoch().count()) // Cria o gerador com seed baseada no argumento;
-uniform_int_distribution<int>(0, i)(rng) // Gera um número aleatório entre 0 e i
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count()); // Cria o gerador com seed baseada no argumento
+uniform_int_distribution<int>(0, i)(rng); // Gera um número aleatório entre 0 e i
 shuffle(permutation.begin(), permutation.end(), rng); // random_shuffle
 ```
 
